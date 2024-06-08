@@ -1,0 +1,1 @@
+export const fetchMovie = (url) => fetch(url).then((res) => res.json())
