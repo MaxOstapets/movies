@@ -48,10 +48,10 @@ const Main = () => {
                                 rating = {el.rating}
                                 icon1 = {<IoMdTimer />}
                                 icon2 = {<IoMdStar />}
-                                information = "flex gap-40 mt-80 ml-10 text-white"
+                                information = "flex gap-1 mt-80 ml-10 text-white"
                                 title = {el.title}
                                 genre = {el.genre}
-                                titleStyle = "font-bold text-xl w-auto"
+                                titleStyle = "font-bold text-xl w-60"
                                 genreStyle = "text-lg p-1.5 rounded-xl bg-red-700"/>
                         </NavLink>
                         )}
