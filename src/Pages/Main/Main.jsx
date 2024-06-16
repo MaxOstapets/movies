@@ -5,15 +5,22 @@ import About from "../../Components/About/About";
 import Card from "../../Components/Card/Card";
 import { IoMdStar } from "react-icons/io";
 import { IoMdTimer } from "react-icons/io";
+import { useContext, useEffect, useState } from "react";
 import { fetchMovie } from "../../Utils/MovieCards/fetchMovie";
 import { NavLink } from 'react-router-dom';
 import useSWR from 'swr';
+import { SettingsContext } from '../../Provider/Settings';
 
 const aboutMovie = "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure."
 
 const Main = () => {
     const url = "https://666194b563e6a0189fea921f.mockapi.io/movies"
     
+    const [movie, setMovie] = useState([])
+    useEffect(() => {fetchMovie(url).then(res => setMovie(res))}, [])
+
+    //TODO color theme using
+    const { theme } = useContext(SettingsContext)
     const { data, error, isLoading } = useSWR(url, fetchMovie)
     console.log(data);
 
@@ -21,6 +28,8 @@ const Main = () => {
         <>
             <Nav />
             
+            <div className='text-white'>Your color theme: {theme}</div>
+
             <Buttons />
             
             <About 
