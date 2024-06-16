@@ -8,12 +8,9 @@ const About = (props) => {
             <h1 className="text-3xl text-white">{props.title}</h1>
             
             <div className="flex gap-6">
-                <ul className="flex gap-5 text-2xl">
-                    <li className="bg-white rounded-2xl p-2">{props.genre1}</li>
-                    <li className="bg-white rounded-2xl p-2">{props.genre2}</li>
-                    <li className="bg-white rounded-2xl p-2">{props.genre3}</li>
-                </ul>
-
+                
+                <span className="bg-white rounded-2xl p-2">{props.genre1}</span>
+                
                 <ul className="flex gap-4">
                     <li className="text-white flex justify-center items-center gap-2"><FaRegCalendarAlt />{props.year}</li>
                     <li className="text-white flex justify-center items-center gap-2"><IoMdTimer />{props.time}</li>
