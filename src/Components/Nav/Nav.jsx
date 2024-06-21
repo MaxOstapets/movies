@@ -53,9 +53,10 @@ const BasicMenu = () => {
 
 const Nav = () => {
     const {counter} = useContext(CounterContext)
+    const {theme} = useContext(SettingsContext)
 
     return(
-        <nav className="flex flex-row bg-black h-20 justify-around items-center">
+        <nav className={`flex flex-row ${theme.bgColor} h-20 justify-around items-center`}>
             <ul className="flex flex-row text-xl text-stone-50 gap-7">
                 <NavLink to="/">Home</NavLink> 
                 <li>Genre</li>

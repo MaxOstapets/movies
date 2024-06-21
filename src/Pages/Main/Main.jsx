@@ -25,7 +25,7 @@ const Main = () => {
         <>
             <Nav />
             
-            <div className='text-white'>Your color theme: {theme}</div>
+            <div className='text-white'>Your color theme: {theme.text}</div>
 
             <Buttons />
             
